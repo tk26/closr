@@ -128,7 +128,7 @@ module.exports = class Curation {
 
       case "COMMUNITY":
         // Store the user budget preference here
-        response = Response.genQuickReply(i18n.__("curation.price"), [
+        response = Response.genQuickReply(i18n.__("community.prompt"), [
           {
             title: "~ $20",
             payload: "CURATION_BUDGET_20_WORK"

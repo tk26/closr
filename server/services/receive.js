@@ -184,8 +184,8 @@ module.exports = class Receive {
     ) {
       response = Response.genNuxMessage(this.user);
     } else if (payload.includes("HELPER") || payload.includes("COUPON")) {
-      let HELPER = new HELPER(this.user, this.webhookEvent);
-      response = HELPER.handlePayload(payload);
+      let helper = new Helper(this.user, this.webhookEvent);
+      response = helper.handlePayload(payload);
     } else if (payload.includes("CARE")) {
       let care = new Care(this.user, this.webhookEvent);
       response = care.handlePayload(payload);
