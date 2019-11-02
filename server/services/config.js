@@ -21,7 +21,8 @@ const ENV_VARS = [
   "APP_SECRET",
   "VERIFY_TOKEN",
   "APP_URL",
-  "SHOP_URL"
+  "SHOP_URL",
+  "MONGODB_URI"
 ];
 
 module.exports = {
@@ -47,6 +48,8 @@ module.exports = {
 
   // Preferred port (default to 3000)
   port: process.env.PORT || 5000,
+
+  mongoUri: process.env.MONGODB_URI,
 
   get mPlatfom() {
     return this.mPlatformDomain + "/" + this.mPlatformVersion;
