@@ -1,0 +1,12 @@
+{
+    "userId": 5,
+    "expertise": [
+        "college",
+        "admissions",
+        "essays",
+        "graduate-school"
+    ],
+    "matchedWith": [
+        6
+    ]
+}
