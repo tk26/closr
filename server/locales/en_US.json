@@ -23,7 +23,7 @@
     "attachment": "Thanks for sending this attachment, we can connect you to an agent to review it or we can start over"
   },
   "helper": {
-    "prompt": "How would you like to offer help?",
+    "prompt": "How would you like to offer help?"
   },
   "helpee": {
     "prompt": "What would  you like help with today?"
@@ -48,7 +48,4 @@
     "clean up": "Clean Up",
     "representative": "Local Representative"
   }
-
-  
-
 }

@@ -80,10 +80,7 @@ module.exports = class Receive {
 
     let response;
 
-    if (
-      (greeting && greeting.confidence > 0.8) ||
-      message.includes("start over")
-    ) {
+    if ((greeting && greeting.confidence > 0.8) || message.includes("start over")) {
       response = Response.genNuxMessage(this.user);
     } else if (Number(message)) {
       response = Order.handlePayload("ORDER_NUMBER");
@@ -183,7 +180,7 @@ module.exports = class Receive {
       payload === "GITHUB"
     ) {
       response = Response.genNuxMessage(this.user);
-    } else if (payload.includes("HELPER") || payload.includes("COUPON")) {
+    } else if (payload.includes("HELPER")) {
       let helper = new Helper(this.user, this.webhookEvent);
       response = helper.handlePayload(payload);
     } else if (payload.includes("CARE")) {
@@ -221,7 +218,7 @@ module.exports = class Receive {
     return response;
   }
 
-  handlePrivateReply(type,object_id) {
+  handlePrivateReply(type, object_id) {
     let welcomeMessage = i18n.__("get_started.welcome") + " " +
       i18n.__("get_started.guidance") + ". " +
       i18n.__("get_started.help");
