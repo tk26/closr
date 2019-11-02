@@ -86,6 +86,23 @@ module.exports = class Curation {
         ]);
         break;
 
+      case "HELPEE":
+        response = Response.genQuickReply(i18n.__("helpee.prompt"), [
+          {
+            title: i18n.__("menu.emotional"),
+            payload: "EMOTIONAL"
+          },
+          {
+            title: i18n.__("menu.education"),
+            payload: "EDUCATION"
+          },
+          {
+            title: i18n.__("menu.community"),
+            payload: "COMMUNITY"
+          }
+        ]);
+        break;
+
       case "EMOTIONAL":
         response = Response.genQuickReply(i18n.__("education.prompt"), [
           {
@@ -94,7 +111,7 @@ module.exports = class Curation {
           },
           {
             title: i18n.__("emotions.lonely"),
-            payload: "CURATION_OCASION_DINNER"
+            payload: "USER_2"
           },
           {
             title: i18n.__("emotions.depressed"),
@@ -130,34 +147,27 @@ module.exports = class Curation {
         // Store the user budget preference here
         response = Response.genQuickReply(i18n.__("community.prompt"), [
           {
-            title: "~ $20",
-            payload: "CURATION_BUDGET_20_WORK"
+            title: i18n.__("community.events"),
+            payload: "CURATION_OCASION_WORK"
           },
           {
-            title: "~ $30",
-            payload: "CURATION_BUDGET_30_WORK"
+            title: i18n.__("community.clean up"),
+            payload: "CURATION_OCASION_DINNER"
           },
           {
-            title: "+ $50",
-            payload: "CURATION_BUDGET_50_WORK"
+            title: i18n.__("community.representative"),
+            payload: "CURATION_OCASION_PARTY"
           }
         ]);
         break;
 
-      case "CURATION_OCASION_DINNER":
+      case "USER_2":
         // Store the user budget preference here
-        response = Response.genQuickReply(i18n.__("curation.price"), [
+        response = Response.genImageTemplate(("Steve", "Person", "https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"), [
           {
-            title: "~ $20",
-            payload: "CURATION_BUDGET_20_DINNER"
-          },
-          {
-            title: "~ $30",
-            payload: "CURATION_BUDGET_30_DINNER"
-          },
-          {
-            title: "+ $50",
-            payload: "CURATION_BUDGET_50_DINNER"
+            title: "Steve",
+            subtitle: "Person",
+            image_url: src="../models/user-images/adult-elder-elderly-432722.jpg"
           }
         ]);
         break;

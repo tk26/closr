@@ -29,7 +29,7 @@
     "prompt": "What would  you like help with today?"
   },
   "emotions": {
-    "promt": "What emotion are you feeling or can you help with?",
+    "prompt": "What emotion are you feeling or can you help with?",
     "sad": "Sad",
     "lonely": "Lonely",
     "depressed": "Depressed",
