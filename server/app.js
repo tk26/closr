@@ -1,4 +1,3 @@
-
 const express = require("express"),
     { urlencoded, json } = require("body-parser"),
     cookieParser = require('cookie-parser'),
@@ -14,6 +13,7 @@ const express = require("express"),
 
 const indexRouter = require('./routes/index'),
       usersRouter = require('./routes/users'),
+      questionsRouter = require('./routes/questions'),
       webhookRouter = require('./routes/webhooks');
 
 app.use(logger('dev'));
@@ -25,6 +25,7 @@ app.use(json({ verify: verifyRequestSignature }));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/questions', questionsRouter);
 app.use('/webhook', webhookRouter);
 
 
