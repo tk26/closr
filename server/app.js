@@ -14,7 +14,8 @@ const express = require("express"),
 const indexRouter = require('./routes/index'),
       usersRouter = require('./routes/users'),
       questionsRouter = require('./routes/questions'),
-      webhookRouter = require('./routes/webhooks');
+      webhookRouter = require('./routes/webhooks'),
+      answersRouter = require('./routes/answers');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -27,7 +28,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/questions', questionsRouter);
 app.use('/webhook', webhookRouter);
-
+app.use('/answers', answersRouter);
 
 function verifyRequestSignature(req, res, buf) {
     var signature = req.headers["x-hub-signature"];
