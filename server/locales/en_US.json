@@ -23,10 +23,10 @@
     "attachment": "Thanks for sending this attachment, we can connect you to an agent to review it or we can start over"
   },
   "helper": {
-    "prompt": "How would you like to offer help?"
+    "prompt": "I want to help"
   },
   "helpee": {
-    "prompt": "What would  you like help with today?"
+    "prompt": "I need help"
   },
   "emotions": {
     "prompt": "What emotion are you feeling or can you help with?",
