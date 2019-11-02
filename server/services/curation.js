@@ -69,42 +69,64 @@ module.exports = class Curation {
         ];
         break;
 
-      case "CURATION":
-        response = Response.genQuickReply(i18n.__("curation.prompt"), [
+      case "HELPER":
+        response = Response.genQuickReply(i18n.__("helper.prompt"), [
           {
-            title: i18n.__("curation.me"),
-            payload: "CURATION_FOR_ME"
+            title: i18n.__("menu.emotional"),
+            payload: "EMOTIONAL"
           },
           {
-            title: i18n.__("curation.someone"),
-            payload: "CURATION_SOMEONE_ELSE"
+            title: i18n.__("menu.education"),
+            payload: "EDUCATION"
+          },
+          {
+            title: i18n.__("menu.community"),
+            payload: "COMMUNITY"
           }
         ]);
         break;
 
-      case "CURATION_FOR_ME":
-      case "CURATION_SOMEONE_ELSE":
-        response = Response.genQuickReply(i18n.__("curation.occasion"), [
+      case "EMOTIONAL":
+        response = Response.genQuickReply(i18n.__("education.prompt"), [
           {
-            title: i18n.__("curation.work"),
+            title: i18n.__("emotions.sad"),
             payload: "CURATION_OCASION_WORK"
           },
           {
-            title: i18n.__("curation.dinner"),
+            title: i18n.__("emotions.lonely"),
             payload: "CURATION_OCASION_DINNER"
           },
           {
-            title: i18n.__("curation.party"),
+            title: i18n.__("emotions.depressed"),
             payload: "CURATION_OCASION_PARTY"
           },
           {
-            title: i18n.__("curation.sales"),
+            title: i18n.__("emotions.stress"),
+            payload: "CARE_SALES"
+          }
+        ]);
+      case "EDUCATION":
+        response = Response.genQuickReply(i18n.__("education.prompt"), [
+          {
+            title: i18n.__("education.math"),
+            payload: "CURATION_OCASION_WORK"
+          },
+          {
+            title: i18n.__("education.science"),
+            payload: "CURATION_OCASION_DINNER"
+          },
+          {
+            title: i18n.__("education.technology"),
+            payload: "CURATION_OCASION_PARTY"
+          },
+          {
+            title: i18n.__("education.college"),
             payload: "CARE_SALES"
           }
         ]);
         break;
 
-      case "CURATION_OCASION_WORK":
+      case "COMMUNITY":
         // Store the user budget preference here
         response = Response.genQuickReply(i18n.__("curation.price"), [
           {
