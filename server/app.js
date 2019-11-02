@@ -1,4 +1,3 @@
-
 const express = require("express"),
     { urlencoded, json } = require("body-parser"),
     cookieParser = require('cookie-parser'),
@@ -14,7 +13,9 @@ const express = require("express"),
 
 const indexRouter = require('./routes/index'),
       usersRouter = require('./routes/users'),
-      webhookRouter = require('./routes/webhooks');
+      questionsRouter = require('./routes/questions'),
+      webhookRouter = require('./routes/webhooks'),
+      answersRouter = require('./routes/answers');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -25,8 +26,9 @@ app.use(json({ verify: verifyRequestSignature }));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/questions', questionsRouter);
 app.use('/webhook', webhookRouter);
-
+app.use('/answers', answersRouter);
 
 function verifyRequestSignature(req, res, buf) {
     var signature = req.headers["x-hub-signature"];
