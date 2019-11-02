@@ -10,7 +10,7 @@
 
 "use strict";
 
-const HELPER = require("./HELPER"),
+const Helper = require("./helper"),
   Order = require("./order"),
   Response = require("./response"),
   Care = require("./care"),
