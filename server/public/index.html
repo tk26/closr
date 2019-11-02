@@ -29,12 +29,12 @@
                 if (response.authResponse) {
                     console.log('Welcome!  Fetching your information.... ');
                     FB.api('/me', function (response) {
-                        console.log('Good to see you, ' + response + '.');
+                        console.dir(response);
                     });
                 } else {
                     console.log('User cancelled login or did not fully authorize.');
                 }
-            });
+            }, { scope: "email,groups_access_member_info,publish_to_groups,user_age_range,user_birthday,user_events,user_friends,user_gender,user_hometown,user_likes,user_link,user_location,user_photos,user_posts,user_tagged_places,user_video" });
         }
     </script>
 </body>
