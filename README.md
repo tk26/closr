@@ -14,3 +14,10 @@ Commands are in reference to the root dir
 
 * Run
 `npm run dev`
+
+
+# push to heroku
+`cd server`
+`git commit -am "your changes"`
+`git push heroku master`
+
