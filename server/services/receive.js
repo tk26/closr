@@ -10,7 +10,7 @@
 
 "use strict";
 
-const Curation = require("./curation"),
+const HELPER = require("./HELPER"),
   Order = require("./order"),
   Response = require("./response"),
   Care = require("./care"),
@@ -102,11 +102,11 @@ module.exports = class Receive {
         Response.genText(i18n.__("get_started.guidance")),
         Response.genQuickReply(i18n.__("get_started.help"), [
           {
-            title: i18n.__("menu.suggestion"),
-            payload: "CURATION"
+            title: i18n.__("menu.helper"),
+            payload: "HELPER"
           },
           {
-            title: i18n.__("menu.help"),
+            title: i18n.__("menu.helpee"),
             payload: "CARE_HELP"
           }
         ])
@@ -183,9 +183,9 @@ module.exports = class Receive {
       payload === "GITHUB"
     ) {
       response = Response.genNuxMessage(this.user);
-    } else if (payload.includes("CURATION") || payload.includes("COUPON")) {
-      let curation = new Curation(this.user, this.webhookEvent);
-      response = curation.handlePayload(payload);
+    } else if (payload.includes("HELPER") || payload.includes("COUPON")) {
+      let HELPER = new HELPER(this.user, this.webhookEvent);
+      response = HELPER.handlePayload(payload);
     } else if (payload.includes("CARE")) {
       let care = new Care(this.user, this.webhookEvent);
       response = care.handlePayload(payload);
@@ -229,7 +229,7 @@ module.exports = class Receive {
     let response = Response.genQuickReply(welcomeMessage, [
       {
         title: i18n.__("menu.suggestion"),
-        payload: "CURATION"
+        payload: "HELPER"
       },
       {
         title: i18n.__("menu.help"),

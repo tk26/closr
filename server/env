@@ -1,0 +1,30 @@
+# Environment Config
+
+# store your secrets and config variables in here
+# only invited collaborators will be able to see your .env values
+
+# Page and Application information
+PAGE_ID=Closr-115289013238322
+APP_ID=520326775191251
+PAGE_ACCESS_TOKEN=EAAHZAPASaNtMBAMJNlTEP4zVFmBc39fx1hJQSnZA0Pcm9P3bPTLXoV6C74ZAlatpc2ipFFuhhqWaEmydXZBmjPjEz2mJApsoc6gOxLMUitWHr6ElCGjWaAIQEB2V3Kb1NKyX81MBu7LqZB9v8TVGWkq4ID8yJdcl4MvJYVJ9iOeK00dPQIfiLPfI7aRkrxCUZD
+
+# Your App secret can be found in App Dashboard -> Seetings -> Basic
+APP_SECRET=7c88ca3a9995060f1b073f1268fcb0ce
+
+# A random string that is used for the webhook verification request
+VERIFY_TOKEN=12345678
+
+# URL where you host this code
+# You can use LocalTunnel or Heroku ex: https://mystic-wind-83.herokuapp.com
+APP_URL=https://closr-fb.herokuapp.com
+
+# URL of your website where the "shop now" is located
+# Can be the same as your app domain URL ex: https://www.originalcoastclothing.com/
+SHOP_URL=https://closr-fb.herokuapp.com
+
+# Preferred port
+PORT=5000
+
+MONGODB_URI=mongodb://localhost:27017/closr
+
+# note: .env is a shell file so there can't be spaces around =

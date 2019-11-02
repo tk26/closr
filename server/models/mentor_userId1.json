@@ -1,0 +1,16 @@
+{
+    "userId": 1,
+    "expertise": [
+        "depression",
+        "loneliness",
+        "software",
+        "math",
+        "coding",
+        "admissions",
+        "physics",
+        "crypto"
+    ],
+    "matchedWith": [
+        2, 3, 4
+    ]
+}
